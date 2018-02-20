@@ -334,6 +334,7 @@ class jenkins(
   Array $default_plugins                          = $::jenkins::params::default_plugins,
   String $default_plugins_host                    = $::jenkins::params::default_plugins_host,
   Boolean $purge_plugins                          = $::jenkins::params::purge_plugins,
+  Integer $nofile                                 = $::jenkins::params::nofile,
 ) inherits jenkins::params {
 
   if $purge_plugins and ! $manage_datadirs {

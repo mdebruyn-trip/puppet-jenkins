@@ -30,6 +30,7 @@ class jenkins::params {
     'structs', # required by credentials plugin
   ]
   $purge_plugins = false
+  $nofile       = 4096
 
   case $::osfamily {
     'Debian': {
